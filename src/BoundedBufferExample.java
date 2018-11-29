@@ -104,18 +104,22 @@ public class BoundedBufferExample {
         Consumer consumer = new Consumer(buffer);
 
         Thread producerThread = new Thread(producer);
-        Thread consumerThread1 = new Thread(consumer);
-        Thread consumerThread2 = new Thread(consumer);
+
+        Thread[] consumerThread = new Thread[2];
+
+        for (int i = 0; i < 2; i++){
+            consumerThread[i] = new Thread(consumer);
+            consumerThread[i].start();
+        }
 
         producerThread.start();
 
-        consumerThread1.start();
-        consumerThread2.start();
-
         try {
             producerThread.join();
-            consumerThread1.join();
-            consumerThread2.join();
+            for (Thread th: consumerThread
+                 ) {
+                th.join();
+            }
         } catch (InterruptedException e)
         {}
 
