@@ -1,22 +1,10 @@
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.BufferUnderflowException;
-import java.nio.MappedByteBuffer;
-import java.nio.channels.FileChannel;
 import java.nio.channels.Selector;
 
 public class NIOExample {
 
     public static void main(String[] args)
     {
-//        try {
-//            Selector selector = Selector.open();
-//
-//        } catch (IOException e) {
-//
-//        }
-
         try {
             FileInputStream inputStream = new FileInputStream("data.txt");
             MappedByteBuffer buffer = inputStream.getChannel().map(FileChannel.MapMode.READ_ONLY, 0, inputStream.available());
@@ -38,6 +26,9 @@ public class NIOExample {
             System.out.println(ex.getMessage());
         }
 
+        try {
+
+        }
 
 
 
