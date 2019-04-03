@@ -4,4 +4,10 @@ public class FooImpl implements Foo {
         System.out.println("move: " + ob);
         return null;
     }
+
+    @Override
+    public String sayHello() {
+        System.out.println("hello robbie");
+        return "hello robbie";
+    }
 }

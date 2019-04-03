@@ -17,7 +17,6 @@ public class DebugProxy implements InvocationHandler {
         } catch (Exception ex) {
             throw new RuntimeException("unexpected invocation exception: " +
                     ex.getMessage());
-
         } finally {
             System.out.println("after method " + method.getName());
         }
@@ -35,8 +34,11 @@ public class DebugProxy implements InvocationHandler {
     }
 
     public static void main(String args[]) {
+        //System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         Foo foo = (Foo)DebugProxy.newInstance(new FooImpl());
         foo.move("robbie");
+        foo.sayHello();
     }
 
 }
