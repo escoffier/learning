@@ -1,3 +1,5 @@
+package DynamicProxyDemo;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
@@ -32,6 +34,27 @@ public class DebugProxy implements InvocationHandler {
     private DebugProxy(Object obj) {
         this.obj = obj;
     }
+
+    public interface Foo {
+
+        Object move(Object ob);
+        String sayHello();
+    }
+
+    static public class FooImpl implements Foo {
+        @Override
+        public Object move(Object ob) {
+            System.out.println("move: " + ob);
+            return null;
+        }
+
+        @Override
+        public String sayHello() {
+            System.out.println("hello robbie");
+            return "hello robbie";
+        }
+    }
+
 
     public static void main(String args[]) {
         //System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
