@@ -1,5 +1,3 @@
-package DynamicProxyDemo;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
@@ -9,7 +7,7 @@ public class DebugProxy implements InvocationHandler {
 
     private Object obj;
 
-    @Override
+    ///@Override
     public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
         Object result;
         try {
@@ -42,13 +40,13 @@ public class DebugProxy implements InvocationHandler {
     }
 
     static public class FooImpl implements Foo {
-        @Override
+
         public Object move(Object ob) {
             System.out.println("move: " + ob);
             return null;
         }
 
-        @Override
+
         public String sayHello() {
             System.out.println("hello robbie");
             return "hello robbie";

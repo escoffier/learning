@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class App {
+public class CGLIBApp {
 
     static class MyMethodInterceptor implements MethodInterceptor {
         public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
