@@ -1,4 +1,6 @@
-public class PersionSerivce {
+
+
+public class PersonService {
     public String sayHello(String name) {
 
         String str = "Hello " + name;

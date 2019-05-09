@@ -1,12 +1,9 @@
-import net.sf.cglib.beans.BeanGenerator;
 import net.sf.cglib.proxy.Enhancer;
-import net.sf.cglib.proxy.FixedValue;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
-import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -36,14 +33,14 @@ public class CGLIBApp {
 
     public static void main(String[] args) throws Exception {
         Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(PersionSerivce.class);
+        enhancer.setSuperclass(PersonService.class);
 //        enhancer.setCallback((FixedValue)() -> {
 //            System.out.println( "Hello Tom!");
 //            //return  "Hello Tom!";
 //        });
         enhancer.setCallback(new MyMethodInterceptor());
 
-        PersionSerivce proxy = (PersionSerivce) enhancer.create();
+        PersonService proxy = (PersonService) enhancer.create();
 
         String res = proxy.sayHello("robbie");
         System.out.println(res);
