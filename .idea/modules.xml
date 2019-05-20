@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DynamicProxyDemo/DynamicProxyDemo.iml" filepath="$PROJECT_DIR$/DynamicProxyDemo/DynamicProxyDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/learning.iml" filepath="$PROJECT_DIR$/learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/learning.iml" filepath="$PROJECT_DIR$/.idea/learning.iml" />
     </modules>
   </component>
 </project>

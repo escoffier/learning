@@ -37,6 +37,7 @@ public class DebugProxy implements InvocationHandler {
 
         Object move(Object ob);
         String sayHello();
+        void sayHi();
     }
 
     static public class FooImpl implements Foo {
@@ -48,8 +49,13 @@ public class DebugProxy implements InvocationHandler {
 
 
         public String sayHello() {
+            sayHi();
             System.out.println("hello robbie");
             return "hello robbie";
+        }
+
+        public void sayHi() {
+            System.out.println("hi");
         }
     }
 
@@ -59,7 +65,10 @@ public class DebugProxy implements InvocationHandler {
         System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         Foo foo = (Foo)DebugProxy.newInstance(new FooImpl());
         foo.move("robbie");
+        System.out.println("##############");
         foo.sayHello();
+        System.out.println("##############");
+        foo.sayHi();
     }
 
 }
