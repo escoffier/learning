@@ -43,14 +43,16 @@ public class CGLIBApp {
         PersonService proxy = (PersonService) enhancer.create();
 
         String res = proxy.sayHello("robbie");
+
+        System.out.println("*************************");
         System.out.println(res);
 
         int len = proxy.lengthOfName("escoffier");
         System.out.println("len is " + len);
 
+        System.out.println("*************************");
+        proxy.sayHi();
+
         //beanTest();
-
-
-
     }
 }
