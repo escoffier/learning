@@ -13,14 +13,14 @@ public class HashMapDemo {
 
     private String randomString() {
         int leftLimit = 97;
-        int rightlLimit = 122;
+        int rightLimit = 122;
         int targetStringLength = 10;
 
         ThreadLocalRandom random = ThreadLocalRandom.current();
         StringBuilder stringBuilder = new StringBuilder(targetStringLength);
 
         for (int i =0 ; i < targetStringLength; i++){
-            int randomLimitInt = leftLimit + (int) (random.nextFloat() * (rightlLimit - leftLimit + 1));
+            int randomLimitInt = leftLimit + (int) (random.nextFloat() * (rightLimit - leftLimit + 1));
             stringBuilder.append(randomLimitInt);
         }
        return stringBuilder.toString();
@@ -30,8 +30,8 @@ public class HashMapDemo {
     public void test() {
         Thread[] threads = new Thread[4];
 
-        Map<String, String> synMap = Collections.synchronizedMap(map);
-        //Map synMap = map;
+        //Map<String, String> synMap = Collections.synchronizedMap(map);
+        Map synMap = map;
         Thread  thread = new Thread(()-> {
             for (int i = 0 ; i < 100; i ++) {
                 System.out.println(synMap.size());
