@@ -40,18 +40,18 @@ public class CGLIBApp {
 //        });
         enhancer.setCallback(new MyMethodInterceptor());
 
-        PersonService proxy = (PersonService) enhancer.create();
+        PersonService personService = (PersonService) enhancer.create();
 
-        String res = proxy.sayHello("robbie");
+        String res = personService.sayHello("robbie");
 
         System.out.println("*************************");
         System.out.println(res);
 
-        int len = proxy.lengthOfName("escoffier");
+        int len = personService.lengthOfName("escoffier");
         System.out.println("len is " + len);
 
         System.out.println("*************************");
-        proxy.sayHi();
+        personService.sayHi();
 
         //beanTest();
     }

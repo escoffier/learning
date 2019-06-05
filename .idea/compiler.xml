@@ -21,8 +21,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ConcurrencyDemo" target="8" />
-      <module name="DynamicProxyDemo" target="8" />
+      <module name="ConcurrencyDemo" target="1.5" />
+      <module name="DynamicProxyDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
