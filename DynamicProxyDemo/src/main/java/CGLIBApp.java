@@ -11,8 +11,10 @@ public class CGLIBApp {
 
     static class MyMethodInterceptor implements MethodInterceptor {
         public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
-            System.out.println("Your name is " + Arrays.toString(args));
+            System.out.println("method args: " + Arrays.toString(args));
+            System.out.println("method name: " + method.getName());
             return proxy.invokeSuper(obj, args);
+            //return proxy.invoke(obj, args);
         }
     }
 
@@ -40,19 +42,18 @@ public class CGLIBApp {
 //        });
         enhancer.setCallback(new MyMethodInterceptor());
 
-        PersonService personService = (PersonService) enhancer.create();
+        PersonService personService = (PersonService) enhancer.create(new Class[]{String.class}, new Object[]{new String("kobe")});
 
         String res = personService.sayHello("robbie");
 
         System.out.println("*************************");
-        System.out.println(res);
+        System.out.println("return value: " + res);
 
-        int len = personService.lengthOfName("escoffier");
-        System.out.println("len is " + len);
-
+//        int len = personService.lengthOfName("escoffier");
+//        System.out.println("len is " + len);
+//
         System.out.println("*************************");
         personService.sayHi();
 
-        //beanTest();
     }
 }

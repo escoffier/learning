@@ -1,3 +1,5 @@
+package ConcurrentDemo;
+
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
@@ -24,8 +26,7 @@ public class BoundedBufferExample {
                 ++count;
                 notEmpty.signal();
 
-            }
-            finally {
+            } finally {
                 lock.unlock();
 
             }
@@ -43,8 +44,7 @@ public class BoundedBufferExample {
                 --count;
                 notFull.signal();
                 return obj;
-            }
-            finally {
+            } finally {
                 lock.unlock();
 
 
@@ -76,6 +76,7 @@ public class BoundedBufferExample {
 
     private static class Consumer implements Runnable {
         final private BoundedBuffer boundedBuffer;
+
         Consumer(BoundedBuffer buffer) {
             boundedBuffer = buffer;
         }
@@ -117,14 +118,12 @@ public class BoundedBufferExample {
         try {
             producerThread.join();
             for (Thread th: consumerThread
-                 ) {
+            ) {
                 th.join();
             }
-        } catch (InterruptedException e)
-        {}
+        } catch (InterruptedException e) {}
 
         ConcurrentHashMap<Integer, String> concurrentHashMap = new ConcurrentHashMap<>();
-
 
 
     }
