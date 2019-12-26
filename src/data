@@ -1,0 +1,2 @@
+adddd  dd Creates a random access file stream to read from, and optionally to write to, the file specified by the File argument.
+A new FileDescriptor object is created to represent this file connection.

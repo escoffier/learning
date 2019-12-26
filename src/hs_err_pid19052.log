@@ -1,0 +1,87 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGILL (0x4) at pc=0x00007f5a0d0002b5, pid=19052, tid=0x00007f5a23fd3700
+#
+# JRE version:  (8.0_231-b11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.231-b11 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# v  ~BufferBlob::get_cpu_info_stub
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f5a1c00b000):  JavaThread "Unknown thread" [_thread_in_vm, id=19053, stack(0x00007f5a23ed4000,0x00007f5a23fd4000)]
+
+siginfo: si_signo: 4 (SIGILL), si_code: 2 (ILL_ILLOPN), si_addr: 0x00007f5a0d0002b5
+
+Registers:
+RAX=0x0000000000000006, RBX=0x0000000005100800, RCX=0x00000000cafebabe, RDX=0x0000000000000000
+RSP=0x00007f5a23fd27c8, RBP=0x00007f5a233a2840, RSI=0x0000000000000000, RDI=0x00007f5a233a2840
+R8 =0x00007f5a23fd2620, R9 =0x000000000000000c, R10=0x00007f5a0d000374, R11=0x000000000000000c
+R12=0x00007f5a23fd2a20, R13=0x00007f5a233680f8, R14=0x00007f5a1c00b900, R15=0x00007f5a1c00b950
+RIP=0x00007f5a0d0002b5, EFLAGS=0x0000000000210246, CSGSFS=0x002b000000000033, ERR=0x0000000000000000
+  TRAPNO=0x0000000000000006
+
+Top of Stack: (sp=0x00007f5a23fd27c8)
+0x00007f5a23fd27c8:   0000000000000246 00007f5a0d000160
+0x00007f5a23fd27d8:   00007f5a233a27d4 00007f5a23fd29f0
+0x00007f5a23fd27e8:   00007f5a22e9a064 0000000000000000
+0x00007f5a23fd27f8:   0000000000000000 0000000000000005
+0x00007f5a23fd2808:   ffffffffffffffff 000000f0ffffffff
+0x00007f5a23fd2818:   00007f5a232b1d20 0000000000000000
+0x00007f5a23fd2828:   0000000000000000 0000000000000000
+0x00007f5a23fd2838:   0000000000000000 0000000000000005
+0x00007f5a23fd2848:   ffffffffffffffff 00000010ffffffff
+0x00007f5a23fd2858:   00007f5a232b1d20 0000000000000000
+0x00007f5a23fd2868:   0000000000000000 0000000000000000
+0x00007f5a23fd2878:   0000000000000000 0000000000000005
+0x00007f5a23fd2888:   ffffffffffffffff 00000020ffffffff
+0x00007f5a23fd2898:   00007f5a232b1d20 0000000000000000
+0x00007f5a23fd28a8:   0000000000000000 0000000000000000
+0x00007f5a23fd28b8:   0000000000000000 0000000000000005
+0x00007f5a23fd28c8:   ffffffffffffffff 00000060ffffffff
+0x00007f5a23fd28d8:   00007f5a232b1d20 0000000000000000
+0x00007f5a23fd28e8:   0000000000000000 0000000000000000
+0x00007f5a23fd28f8:   0000000000000000 0000000000000005
+0x00007f5a23fd2908:   ffffffffffffffff 00000050ffffffff
+0x00007f5a23fd2918:   00007f5a232b1d20 0000000000000000
+0x00007f5a23fd2928:   0000000000000000 0000000000000000
+0x00007f5a23fd2938:   0000000000000000 0000000000000005
+0x00007f5a23fd2948:   ffffffffffffffff 00000040ffffffff
+0x00007f5a23fd2958:   00007f5a232b1d20 0000000000000000
+0x00007f5a23fd2968:   0000000000000000 0000000000000000
+0x00007f5a23fd2978:   0000000000000000 0000000000000005
+0x00007f5a23fd2988:   ffffffffffffffff 00000000ffffffff
+0x00007f5a23fd2998:   00007f5a232b1d20 0000000000000000
+0x00007f5a23fd29a8:   0000000000000000 0000000000000000
+0x00007f5a23fd29b8:   fb977ab712d18d00 00007f5a23fd29f0 
+
+Instructions: (pc=0x00007f5a0d0002b5)
+0x00007f5a0d000295:   fe ca c5 f9 6e c1 c5 f9 70 c0 00 c4 e3 7d 18 c0
+0x00007f5a0d0002a5:   01 c5 fe 6f f8 c5 7e 6f c0 c5 7e 6f f8 33 f6 8b
+0x00007f5a0d0002b5:   06 48 8d b5 f8 00 00 00 c5 fe 7f 06 c5 fe 7f 7e
+0x00007f5a0d0002c5:   20 c5 7e 7f 46 40 c5 7e 7f 7e 60 b8 07 00 00 00 
+
+Stack: [0x00007f5a23ed4000,0x00007f5a23fd4000],  sp=0x00007f5a23fd27c8,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+v  ~BufferBlob::get_cpu_info_stub
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00007f5a1c00b000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=19053, stack(0x00007f5a23ed4000,0x00007f5a23fd4000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+

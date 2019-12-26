@@ -1,5 +1,6 @@
 import java.util.concurrent.CopyOnWriteArrayList;
 
+//CopyOnWriteArrayList demo
 public class ArrayListDemo {
     private CopyOnWriteArrayList<String> arrayList;
 

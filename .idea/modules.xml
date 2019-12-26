@@ -4,7 +4,14 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ConcurrencyDemo/ConcurrencyDemo.iml" filepath="$PROJECT_DIR$/ConcurrencyDemo/ConcurrencyDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/DynamicProxyDemo/DynamicProxyDemo.iml" filepath="$PROJECT_DIR$/DynamicProxyDemo/DynamicProxyDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/btracedemo/btracedemo.iml" filepath="$PROJECT_DIR$/btracedemo/btracedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/classdumpfilter/classdumpfilter.iml" filepath="$PROJECT_DIR$/classdumpfilter/classdumpfilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collectiondemo/collectiondemo.iml" filepath="$PROJECT_DIR$/collectiondemo/collectiondemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dispatchdemo/dispatchdemo.iml" filepath="$PROJECT_DIR$/dispatchdemo/dispatchdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/futuredemo/futuredemo.iml" filepath="$PROJECT_DIR$/futuredemo/futuredemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/learning.iml" filepath="$PROJECT_DIR$/.idea/learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmqdemo/rabbitmqdemo.iml" filepath="$PROJECT_DIR$/rabbitmqdemo/rabbitmqdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zookeeperdemo/zookeeperdemo.iml" filepath="$PROJECT_DIR$/zookeeperdemo/zookeeperdemo.iml" />
     </modules>
   </component>
 </project>

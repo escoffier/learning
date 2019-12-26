@@ -17,12 +17,20 @@ public class ClassLoader1 {
 //    }
 
     public static void main(String[] args) {
-        System.out.println(A.value);
+        System.out.println(SuperClass.value);
 
         ClassLoader loader = ClassLoader1.class.getClassLoader();
         while (loader != null) {
             System.out.println(loader.toString());
             loader = loader.getParent();
+        }
+
+        SubClass a = new SubClass();
+        a.getClass().getClassLoader();
+        ClassLoader cLoader = SuperClass.class.getClassLoader();
+        while (cLoader != null) {
+            System.out.println(cLoader.toString());
+            cLoader = cLoader.getParent();
         }
     }
 

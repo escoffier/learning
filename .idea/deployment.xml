@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="131">
+    <serverData>
+      <paths name="131">
+        <serverdata>
+          <mappings>
+            <mapping deploy="" local="$PROJECT_DIR$/classdumpfilter" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/zookeeper/demos/" local="$PROJECT_DIR$/zookeeperdemo/target" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/zookeeperdemo/target/classes" />
+            <excludedPath local="true" path="$PROJECT_DIR$/zookeeperdemo/target/generated-sources" />
+            <excludedPath local="true" path="$PROJECT_DIR$/zookeeperdemo/target/generated-test-sources" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

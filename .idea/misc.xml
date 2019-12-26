@@ -8,6 +8,13 @@
       <list>
         <option value="$PROJECT_DIR$/DynamicProxyDemo/pom.xml" />
         <option value="$PROJECT_DIR$/ConcurrencyDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/zookeeperdemo/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmqdemo/pom.xml" />
+        <option value="$PROJECT_DIR$/dispatchdemo/pom.xml" />
+        <option value="$PROJECT_DIR$/collectiondemo/pom.xml" />
+        <option value="$PROJECT_DIR$/classdumpfilter/pom.xml" />
+        <option value="$PROJECT_DIR$/btracedemo/pom.xml" />
+        <option value="$PROJECT_DIR$/futuredemo/pom.xml" />
       </list>
     </option>
   </component>

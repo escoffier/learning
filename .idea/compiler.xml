@@ -16,13 +16,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="classdumpfilter" />
+        <module name="collectiondemo" />
+        <module name="zookeeperdemo" />
         <module name="DynamicProxyDemo" />
+        <module name="rabbitmqdemo" />
+        <module name="futuredemo" />
+        <module name="btracedemo" />
         <module name="ConcurrencyDemo" />
+        <module name="dispatchdemo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ConcurrencyDemo" target="8" />
-      <module name="DynamicProxyDemo" target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="btracedemo" target="1.8" />
+      <module name="classdumpfilter" target="1.5" />
+      <module name="collectiondemo" target="1.5" />
+      <module name="ConcurrencyDemo" target="1.5" />
+      <module name="dispatchdemo" target="1.5" />
+      <module name="DynamicProxyDemo" target="1.8" />
+      <module name="futuredemo" target="8" />
+      <module name="rabbitmqdemo" target="1.5" />
+      <module name="zookeeperdemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
